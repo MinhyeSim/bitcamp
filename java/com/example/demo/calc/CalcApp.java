@@ -22,27 +22,32 @@ public class CalcApp {
         this.opcode = opcode;
         this.num2 = num2;
         int res = 0;
-        if (opcode.equals("+")) {
+        if(opcode.equals("+")){
             res = num1 + num2;
-
-        } else if (opcode.equals("-")) {
+        }else if (opcode.equals("-")){
             res = num1 - num2;
-
-        }else if(opcode.equals("*")){
+        }else if (opcode.equals("*")){
             res = num1 * num2;
-        }else if(opcode.equals("/")){}
-        res = num1 / num2;
+        }else if (opcode.equals("/")){
+            res = num1 / num2;
+        }
 
 
 
-        return String.format("%d %s %d = %d",this.num1,this.opcode,this.num2,res);
+        //switch (){}
 
+
+        String result = String.format("%d %s %d = %d",
+                this.num1, this.opcode, this.num2, res);
+
+        return result;
+    }
 
     }
 
 
 
-    }
+
 
 
 
