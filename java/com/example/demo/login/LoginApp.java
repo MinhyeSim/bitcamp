@@ -37,7 +37,7 @@ public class LoginApp {
             default: res = String.format(" %s님의 ID는 맞고, 비번 %s가 틀립니다. 로그인 실패 ",this.id, this.pw); break;
        }*/
 
-        return  (pw.equals(PASSWORD)) ? String.format(" %s님의 비번 %s가 맞습니다. 로그인 성공 ", this.name, this.pw)
+        return  (pw.equals(PASSWORD)) ? String.format(" %s님의 비번 %s가 맞습니다. 로그인 성공 ",this.name,this.pw)
                 : String.format(" %s님의 ID는 맞고, 비번 %s가 틀립니다. 로그인 실패 ",this.id, this.pw);
 
 
