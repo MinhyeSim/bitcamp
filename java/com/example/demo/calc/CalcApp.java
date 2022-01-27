@@ -12,7 +12,7 @@ package com.example.demo.calc;
  */
 
 public class CalcApp {
-    public String CALAPP ="계산기";
+    public static String CALC_APP ="계산기";
     private int num1;
     private String opcode;
     private int num2;

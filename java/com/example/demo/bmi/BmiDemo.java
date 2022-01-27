@@ -15,16 +15,8 @@ import java.util.Scanner;
  */
 public class BmiDemo {
 
-    public static void main (String []args){
-        Scanner scanner = new Scanner(System.in);
+    public void execute (String name, String tall, String weight){
         BmiApp bmiApp = new BmiApp();
-        System.out.println(BmiApp.Bmi_App);
-        System.out.println("이름 : ");
-        String name = scanner.next();
-        System.out.println("키 : ");
-        String tall = scanner.next();
-        System.out.println("몸무게");
-        String weight = scanner.next();
         String res = bmiApp.bmi(name,tall,weight);
         System.out.println(res);
     }

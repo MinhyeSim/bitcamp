@@ -31,14 +31,14 @@ package com.example.demo.grdae;
  * 2022-01-26   MinHye_Sim   최초 생성
  */
 public class GradeApp {
-    static String GRADE_TITLE;
+    public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
     private int eng;
     private int math;
 
 
-    public String GradeTitle(String name, int kor, int eng, int math){
+    public String getGradeTitle(String name, int kor, int eng, int math){
         this.name = name;
         this.kor = kor;
         this.eng = eng;
