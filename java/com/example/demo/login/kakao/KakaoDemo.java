@@ -1,6 +1,5 @@
-package com.example.demo.kakao;
+package com.example.demo.login.kakao;
 
-import java.security.PublicKey;
 import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc

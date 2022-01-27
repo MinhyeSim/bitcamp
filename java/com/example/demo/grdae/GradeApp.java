@@ -43,8 +43,8 @@ public class GradeApp {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
-        int total = 0;
-        int avg = 0;
+        int total = kor + eng + math;
+        int avg = total / 3;
 
         String pass = (avg >= 60) ? "합격" : "불합격";
         String grade = String.format("########## %s ########\n" +
