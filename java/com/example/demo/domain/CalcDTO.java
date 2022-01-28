@@ -1,4 +1,4 @@
-package com.example.demo.calc;
+package com.example.demo.domain;
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcApp.java

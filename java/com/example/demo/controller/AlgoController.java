@@ -1,4 +1,6 @@
-package com.example.demo.algorithim;
+package com.example.demo.controller;
+
+import com.example.demo.algorithim.Hash;
 
 import java.util.Scanner;
 

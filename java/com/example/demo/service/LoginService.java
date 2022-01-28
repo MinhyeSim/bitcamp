@@ -1,4 +1,6 @@
-package com.example.demo.login;
+package com.example.demo.service;
+
+import com.example.demo.domain.LoginDTO;
 
 import java.util.Scanner;
 /**

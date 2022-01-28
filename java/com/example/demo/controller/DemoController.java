@@ -1,12 +1,13 @@
 package com.example.demo.controller;
 
-import com.example.demo.bmi.BmiDTO;
-import com.example.demo.bmi.BmiService;
-import com.example.demo.calc.CalcDTO;
-import com.example.demo.calc.CalcService;
-import com.example.demo.grdae.GradeService;
-import com.example.demo.hello.HelloService;
-import com.example.demo.login.LoginService;
+import com.example.demo.domain.BmiDTO;
+import com.example.demo.domain.GradeDTO;
+import com.example.demo.service.BmiService;
+import com.example.demo.domain.CalcDTO;
+import com.example.demo.service.CalcService;
+import com.example.demo.service.GradeService;
+import com.example.demo.service.HelloService;
+import com.example.demo.service.LoginService;
 
 import java.util.Scanner;
 
@@ -28,7 +29,8 @@ public class DemoController {
         CalcDTO calc = new CalcDTO();
         BmiDTO bmi = new BmiDTO();
         BmiService bmiService = new BmiService();
-        GradeService gradeDemo = new GradeService();
+        GradeService gradeService = new GradeService();
+        GradeDTO grade = new GradeDTO();
         HelloService helloDemo = new HelloService();
         LoginService loginDemo = new LoginService();
         while (true) {
@@ -59,7 +61,14 @@ public class DemoController {
                     res = calcService.getCalc(calc);
 
                 case "3":
-                    res = "GRADE";
+                    System.out.println(GradeDTO.GRADE_TITLE+"\n name, kor, eng, math 입력");
+                    grade.setName(scanner.next());
+                    grade.setKor(scanner.nextInt());
+                    grade.setEng(scanner.nextInt());
+                    grade.setMath(scanner.nextInt());
+                    res = gradeService.execute(grade);
+
+
 
 
                     break;

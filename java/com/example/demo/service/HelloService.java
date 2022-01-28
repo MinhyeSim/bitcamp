@@ -1,4 +1,6 @@
-package com.example.demo.hello;
+package com.example.demo.service;
+
+import com.example.demo.domain.HelloDTO;
 
 import java.util.Scanner;
 /**

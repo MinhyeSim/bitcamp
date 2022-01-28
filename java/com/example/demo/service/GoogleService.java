@@ -1,4 +1,6 @@
-package com.example.demo.google;
+package com.example.demo.service;
+
+import com.example.demo.domain.GoogleDTO;
 
 import java.util.Scanner;
 

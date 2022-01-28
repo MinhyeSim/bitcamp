@@ -1,4 +1,4 @@
-package com.example.demo.grdae;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.grdae
@@ -37,30 +37,39 @@ public class GradeDTO {
     private int eng;
     private int math;
 
+    public String getName(){
+        return name;
+    }
 
-    public String getGradeTitle(String name, int kor, int eng, int math){
+    public void setName(String name){
         this.name = name;
-        this.kor = kor;
-        this.eng = eng;
-        this.math = math;
-        int total = kor + eng + math;
-        int avg = total / 3;
+    }
 
-        String pass = (avg >= 60) ? "합격" : "불합격";
-        String grade = String.format("########## %s ########\n" +
-                                " * 이름: %s\n" +
-                                " * > 국어: %d점\n" +
-                                " * > 영어: %d점\n" +
-                                " * > 수학: %d점\n" +
-                                " * 총점: %d점\n" +
-                                " * 평균(정수): %d점\n" +
-                                " * 합격여부: %s\n" +
-                                " * #######################",
-                        GradeDTO.GRADE_TITLE,
-                name, kor, eng, math, total, avg, pass);
-                return grade;
-            }
-        }
+    public int getKor(){
+        return kor;
+    }
+
+    public void setKor(int kor){
+        this.kor = kor;
+    }
+
+    public int getEng(){
+        return eng;
+    }
+
+    public void setEng(int eng){
+        this.eng = eng;
+    }
+
+    public int getMath(){
+        return math;
+    }
+
+    public void setMath(int math){
+        this.math = math;
+    }
+ }
+
 
 
 

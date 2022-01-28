@@ -1,4 +1,6 @@
-package com.example.demo.kakao;
+package com.example.demo.service;
+
+import com.example.demo.domain.KaKaoDTO;
 
 import java.util.Scanner;
 /**
