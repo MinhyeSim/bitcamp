@@ -1,4 +1,4 @@
-package com.example.demo.login.kakao;
+package com.example.demo.kakao;
 
 import java.util.Scanner;
 /**

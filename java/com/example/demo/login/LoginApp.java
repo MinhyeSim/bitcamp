@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 2022-01-25   MinHye_Sim   최초 생성
  */
 public class LoginApp {
-    static String LOGIN_APP;
+    public static String LOGIN_APP;
     String id;
     String pw;
     String name;
