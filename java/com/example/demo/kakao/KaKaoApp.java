@@ -12,6 +12,7 @@ package com.example.demo.kakao;
  */
 
 public class KaKaoApp {
+    public static String kakaoapp = "카카오";
     int telno;
     String message;
 

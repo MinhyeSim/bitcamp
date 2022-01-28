@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class HelloDemo {
 
-    public static void main(String[] args){
+    public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
         HelloApp helloApp = new HelloApp();
         System.out.println(HelloApp.HELLO_TITLE);

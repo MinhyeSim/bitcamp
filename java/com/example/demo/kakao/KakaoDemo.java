@@ -16,6 +16,7 @@ public class KakaoDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         KaKaoApp kaKaoApp = new KaKaoApp();
+        System.out.println(kaKaoApp.kakaoapp);
         System.out.println("Tel no : ");
         int telno = scanner.nextInt();
         System.out.println("message : ");

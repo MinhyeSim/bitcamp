@@ -1,7 +1,5 @@
 package com.example.demo.bmi;
 
-import java.util.Scanner;
-
 /**
  * packageName: com.example.demo.bmi
  * fileName   : BmiDemo
@@ -13,14 +11,14 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class BmiDemo {
+public class BmiService {
 
-    public void execute (String name, String tall, String weight){
-        BmiApp bmiApp = new BmiApp();
-        String res = bmiApp.bmi(name,tall,weight);
-        System.out.println(res);
+
+
+    public String getBmi(BmiDTO bmi){
+        return String.format("%s는 정상", bmi.getName());
+
     }
-
 
 
 

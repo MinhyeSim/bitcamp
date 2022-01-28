@@ -11,20 +11,37 @@ package com.example.demo.bmi;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class BmiApp {
+public class BmiDTO {
     public static String Bmi_App = "BMI";
         private String name;
         private String tall;
         private String weight;
 
-        public String bmi(String name, String tall, String weight){
-            this.name = name;
-            this.tall = tall;
-            this.weight =weight;
-            String res = String.format("%s는 정상",this.name);
-            return res;
-
+        public String getName(){
+            return name;
         }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+        public String getTall(){
+            return tall;
+        }
+
+        public void setTall(String tall){
+            this.tall = tall;
+        }
+
+        public String getWeight(){
+            return weight;
+        }
+
+        public void setWeight(String weight){
+            this.weight = weight;
+        }
+
+
 
 
 

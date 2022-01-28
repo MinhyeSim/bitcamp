@@ -15,6 +15,10 @@ import java.util.Scanner;
  */
 public class GoogleDemo {
     public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        GoogleApp googleApp = new GoogleApp();
+        System.out.println(googleApp.google);
+
 
 
 

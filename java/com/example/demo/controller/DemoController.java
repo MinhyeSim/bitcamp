@@ -1,12 +1,10 @@
 package com.example.demo.controller;
 
-import com.example.demo.bmi.BmiApp;
-import com.example.demo.bmi.BmiDemo;
+import com.example.demo.bmi.BmiDTO;
+import com.example.demo.bmi.BmiService;
 import com.example.demo.calc.CalcApp;
 import com.example.demo.calc.CalcDemo;
-import com.example.demo.grdae.GradeApp;
 import com.example.demo.grdae.GradeDemo;
-import com.example.demo.hello.HelloApp;
 import com.example.demo.hello.HelloDemo;
 import com.example.demo.login.LoginDemo;
 
@@ -27,7 +25,8 @@ public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CalcDemo calcDemo = new CalcDemo();
-        BmiDemo bmiDemo = new BmiDemo();
+        BmiDTO bmi = new BmiDTO();
+        BmiService bmiService = new BmiService();
         GradeDemo gradeDemo = new GradeDemo();
         HelloDemo helloDemo = new HelloDemo();
         LoginDemo loginDemo = new LoginDemo();
@@ -43,13 +42,12 @@ public class DemoController {
                     System.out.println("EXit");
                     return;
                 case "1":
-                    res = "BMI";
-                    System.out.println(BmiApp.Bmi_App);
-                    System.out.println("이름, 키, 몸무게");
-                    String name = scanner.next();
-                    String tall = scanner.next();
-                    String weight = scanner.next();
-                    bmiDemo.execute(name,tall,weight);
+                    System.out.println(BmiDTO.Bmi_App+"\n이름, 키, 몸무게 입력");
+                    bmi.setName(scanner.next());
+                    bmi.setTall(scanner.next());
+                    bmi.setWeight(scanner.next());
+                    res= bmiService.getBmi(bmi);
+
 
                     break;
                 case "2":
@@ -63,6 +61,7 @@ public class DemoController {
                     break;
                 case "4":
                     res = "HELLO";
+                    
 
 
                     break;
