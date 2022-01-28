@@ -1,7 +1,5 @@
 package com.example.demo.hello;
 
-import com.example.demo.calc.CalcApp;
-
 import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc
@@ -14,12 +12,12 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class HelloDemo {
+public class HelloService {
 
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
-        HelloApp helloApp = new HelloApp();
-        System.out.println(HelloApp.HELLO_TITLE);
+        HelloDTO helloApp = new HelloDTO();
+        System.out.println(HelloDTO.HELLO_TITLE);
         System.out.println("이름");
         String name = scanner.next();
         System.out.println("나이");

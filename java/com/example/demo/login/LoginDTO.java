@@ -1,6 +1,5 @@
 package com.example.demo.login;
 
-import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc
  * fileName   : LoginApp.java
@@ -12,7 +11,7 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class LoginApp {
+public class LoginDTO {
     public static String LOGIN_APP;
     String id;
     String pw;

@@ -11,7 +11,7 @@ package com.example.demo.kakao;
  * 2022-01-25   MinHye_Sim   최초 생성
  */
 
-public class KaKaoApp {
+public class KaKaoDTO {
     public static String kakaoapp = "카카오";
     int telno;
     String message;

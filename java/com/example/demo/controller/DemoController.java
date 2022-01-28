@@ -2,11 +2,11 @@ package com.example.demo.controller;
 
 import com.example.demo.bmi.BmiDTO;
 import com.example.demo.bmi.BmiService;
-import com.example.demo.calc.CalcApp;
-import com.example.demo.calc.CalcDemo;
-import com.example.demo.grdae.GradeDemo;
-import com.example.demo.hello.HelloDemo;
-import com.example.demo.login.LoginDemo;
+import com.example.demo.calc.CalcDTO;
+import com.example.demo.calc.CalcService;
+import com.example.demo.grdae.GradeService;
+import com.example.demo.hello.HelloService;
+import com.example.demo.login.LoginService;
 
 import java.util.Scanner;
 
@@ -24,12 +24,13 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalcDemo calcDemo = new CalcDemo();
+        CalcService calcService = new CalcService();
+        CalcDTO calc = new CalcDTO();
         BmiDTO bmi = new BmiDTO();
         BmiService bmiService = new BmiService();
-        GradeDemo gradeDemo = new GradeDemo();
-        HelloDemo helloDemo = new HelloDemo();
-        LoginDemo loginDemo = new LoginDemo();
+        GradeService gradeDemo = new GradeService();
+        HelloService helloDemo = new HelloService();
+        LoginService loginDemo = new LoginService();
         while (true) {
             System.out.println("메뉴 선택");
             String menu = "(0)Exit (1)BMI (2)CALC (3)GRADE (4)HELLO (5)LOGIN ";
@@ -51,9 +52,12 @@ public class DemoController {
 
                     break;
                 case "2":
-                    res = "CALC";
-                    System.out.println(CalcApp.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
-                    System.out.println(calcDemo.execute(scanner.nextInt(), scanner.next(),scanner.nextInt()));
+                    System.out.println(CalcDTO.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
+                    calc.setNum1(scanner.nextInt());
+                    calc.setOpcode(scanner.next());
+                    calc.setNum2(scanner.nextInt());
+                    res = calcService.getCalc(calc);
+
                 case "3":
                     res = "GRADE";
 
@@ -61,7 +65,7 @@ public class DemoController {
                     break;
                 case "4":
                     res = "HELLO";
-                    
+
 
 
                     break;

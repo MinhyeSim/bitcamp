@@ -30,7 +30,7 @@ package com.example.demo.grdae;
  * ================================
  * 2022-01-26   MinHye_Sim   최초 생성
  */
-public class GradeApp {
+public class GradeDTO {
     public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
@@ -56,7 +56,7 @@ public class GradeApp {
                                 " * 평균(정수): %d점\n" +
                                 " * 합격여부: %s\n" +
                                 " * #######################",
-                        com.example.demo.grdae.GradeApp.GRADE_TITLE,
+                        GradeDTO.GRADE_TITLE,
                 name, kor, eng, math, total, avg, pass);
                 return grade;
             }

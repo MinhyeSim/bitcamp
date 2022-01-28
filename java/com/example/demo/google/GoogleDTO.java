@@ -15,7 +15,7 @@ package com.example.demo.google;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class GoogleApp {
+public class GoogleDTO {
     public  static String google = "Google";
     private String name;
     private String tall;

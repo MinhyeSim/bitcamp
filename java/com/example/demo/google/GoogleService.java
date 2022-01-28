@@ -13,10 +13,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class GoogleDemo {
+public class GoogleService {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        GoogleApp googleApp = new GoogleApp();
+        GoogleDTO googleApp = new GoogleDTO();
         System.out.println(googleApp.google);
 
 

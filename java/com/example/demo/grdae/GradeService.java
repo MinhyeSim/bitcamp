@@ -1,7 +1,5 @@
 package com.example.demo.grdae;
 
-import java.util.Scanner;
-
 /**
  * packageName: com.example.demo.grdae
  * fileName   : GradeDemo
@@ -13,10 +11,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-26   MinHye_Sim   최초 생성
  */
-public class GradeDemo {
+public class GradeService {
     public  String execute(String name, int kor, int eng, int math) {
 
-      GradeApp gradeApp = new GradeApp();
+      GradeDTO gradeApp = new GradeDTO();
       return gradeApp.getGradeTitle(name,kor,eng,math);
 
     }

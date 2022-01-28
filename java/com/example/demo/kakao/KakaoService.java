@@ -12,10 +12,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class KakaoDemo {
+public class KakaoService {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        KaKaoApp kaKaoApp = new KaKaoApp();
+        KaKaoDTO kaKaoApp = new KaKaoDTO();
         System.out.println(kaKaoApp.kakaoapp);
         System.out.println("Tel no : ");
         int telno = scanner.nextInt();

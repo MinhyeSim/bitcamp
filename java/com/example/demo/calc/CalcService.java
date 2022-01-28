@@ -1,7 +1,5 @@
 package com.example.demo.calc;
 
-import java.sql.PreparedStatement;
-import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcDemo.java
@@ -13,12 +11,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class CalcDemo {
+public class CalcService {
 
-    public static String execute(int num1,String opcode,int num2){
-
-        CalcApp calcApp = new CalcApp();
-        return calcApp.calc(num1, opcode, num2);
+    public String getCalc(CalcDTO calc){
+        return String.format("%d %s %d = %d",calc.getNum1(),calc.getOpcode(),calc.getNum2());
 
 
     }

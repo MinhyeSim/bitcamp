@@ -10,7 +10,7 @@ package com.example.demo.hello;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class HelloApp {
+public class HelloDTO {
     public static String HELLO_TITLE = "헬로우 어플";
     private String name;
     private int age;

@@ -1,7 +1,5 @@
 package com.example.demo.login;
 
-import com.example.demo.login.LoginApp;
-
 import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc
@@ -14,10 +12,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25   MinHye_Sim   최초 생성
  */
-public class LoginDemo {
+public class LoginService {
 
     public static void main(String[] args) {
-           LoginApp loginApp = new LoginApp();
+           LoginDTO loginApp = new LoginDTO();
            Scanner scanner = new Scanner(System.in);
         System.out.println(loginApp.LOGIN_APP);
         System.out.println("ID");
