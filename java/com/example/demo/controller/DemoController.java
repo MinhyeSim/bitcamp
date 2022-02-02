@@ -1,9 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.domain.BmiDTO;
-import com.example.demo.domain.GradeDTO;
+import com.example.demo.domain.*;
 import com.example.demo.service.BmiService;
-import com.example.demo.domain.CalcDTO;
 import com.example.demo.service.CalcService;
 import com.example.demo.service.GradeService;
 import com.example.demo.service.HelloService;
@@ -31,8 +29,10 @@ public class DemoController {
         BmiService bmiService = new BmiService();
         GradeService gradeService = new GradeService();
         GradeDTO grade = new GradeDTO();
-        HelloService helloDemo = new HelloService();
-        LoginService loginDemo = new LoginService();
+        HelloService helloService = new HelloService();
+        HelloDTO hello = new HelloDTO();
+        LoginService loginService = new LoginService();
+        LoginDTO login = new LoginDTO();
         while (true) {
             System.out.println("메뉴 선택");
             String menu = "(0)Exit (1)BMI (2)CALC (3)GRADE (4)HELLO (5)LOGIN ";
@@ -51,7 +51,6 @@ public class DemoController {
                     bmi.setWeight(scanner.next());
                     res= bmiService.getBmi(bmi);
 
-
                     break;
                 case "2":
                     System.out.println(CalcDTO.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
@@ -59,6 +58,8 @@ public class DemoController {
                     calc.setOpcode(scanner.next());
                     calc.setNum2(scanner.nextInt());
                     res = calcService.getCalc(calc);
+
+                    break;
 
                 case "3":
                     System.out.println(GradeDTO.GRADE_TITLE+"\n name, kor, eng, math 입력");
@@ -68,18 +69,21 @@ public class DemoController {
                     grade.setMath(scanner.nextInt());
                     res = gradeService.execute(grade);
 
-
-
-
                     break;
                 case "4":
-                    res = "HELLO";
-
-
+                    System.out.println(HelloDTO.HELLO_TITLE+"\n name, age");
+                    hello.setName(scanner.next());
+                    hello.setAge(scanner.nextInt());
+                    res = helloService.getHello(hello);
 
                     break;
                 case "5":
-                    res = "LOGIN";
+                    System.out.println(LoginDTO.LOGIN_APP+"\n id, pw, name");
+                    login.setName(scanner.next());
+                    login.setId(scanner.next());
+                    login.setName(scanner.next());
+                    res = loginService.getLogin(login);
+
                     break;
             }
             System.out.println(res);

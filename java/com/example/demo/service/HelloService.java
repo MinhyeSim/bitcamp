@@ -16,19 +16,8 @@ import java.util.Scanner;
  */
 public class HelloService {
 
-    public static void main (String[] args){
-        Scanner scanner = new Scanner(System.in);
-        HelloDTO helloApp = new HelloDTO();
-        System.out.println(HelloDTO.HELLO_TITLE);
-        System.out.println("이름");
-        String name = scanner.next();
-        System.out.println("나이");
-        int age = scanner.nextInt();
-
-        String res = helloApp.hello(name,age);
-        System.out.println(res);
-
-
+    public String getHello(HelloDTO hello) {
+        return String.format("안녕 나는 %s이고 나이는 %d야.",hello.getName(),hello.getAge());
 
 
     }

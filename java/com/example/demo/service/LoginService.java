@@ -16,18 +16,8 @@ import java.util.Scanner;
  */
 public class LoginService {
 
-    public static void main(String[] args) {
-           LoginDTO loginApp = new LoginDTO();
-           Scanner scanner = new Scanner(System.in);
-        System.out.println(loginApp.LOGIN_APP);
-        System.out.println("ID");
-        String id = scanner.next();
-        System.out.println("PW");
-        String pw = scanner.next();
-        System.out.println("Name");
-        String name = scanner.next();
-        String res = loginApp.login(id,pw,name);
-        System.out.println(res);
+    public String getLogin(LoginDTO login) {
+        return String.format("ID : %s , PW : %s, NAME %s님 로그인 성공",login.getId(),login.getPw(),login.getName());
 
        }
 

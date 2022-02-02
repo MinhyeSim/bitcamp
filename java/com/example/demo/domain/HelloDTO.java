@@ -15,18 +15,22 @@ public class HelloDTO {
     private String name;
     private int age;
 
-    public String hello(String name, int age){
-        this.name = name;
-        this.age = age;
-
-
-        String res = String.format(" 안녕 나는 %s 이고 나이는 %d 이야 ",this.name,this.age);
-        return res;
-
-
-
-
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
 
 
 }
