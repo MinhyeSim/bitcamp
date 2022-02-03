@@ -63,11 +63,27 @@ public class DemoController {
 
                 case "3":
                     System.out.println(GradeDTO.GRADE_TITLE+"\n name, kor, eng, math 입력");
-                    grade.setName(scanner.next());
-                    grade.setKor(scanner.nextInt());
-                    grade.setEng(scanner.nextInt());
-                    grade.setMath(scanner.nextInt());
-                    res = gradeService.execute(grade);
+                    int count = scanner.nextInt();
+                    GradeDTO[] grades = new GradeDTO[count];
+                    for (int i = 0; i<grades.length;i++){
+                        System.out.println("이름, 국어, 영어, 수학 점수");
+                        grades[i] = new GradeDTO();
+                        grades[i].setName(scanner.next());
+                        grades[i].setKor(scanner.nextInt());
+                        grades[i].setEng(scanner.nextInt());
+                        grades[i].setMath(scanner.nextInt());
+
+
+                    }for (int i = 0; i<grades.length;i++){
+                    System.out.println(grades[i].getName());
+                    System.out.println(grades[i].getKor());
+                    System.out.println(grades[i].getEng());
+                    System.out.println(grades[i].getMath());
+
+
+                }
+
+
 
                     break;
                 case "4":
