@@ -16,8 +16,8 @@ import java.util.Scanner;
 public interface Feb07Service {
     void dice(Scanner scanner);
     void rps(Scanner scanner);
-    void getPrime(Scanner scanner);
+    void getPrime(int num1, int num2);
     void leapYear(Scanner scanner);
-    void numberGolf(Scanner scanner);
+    String numberGolf();
 
 }

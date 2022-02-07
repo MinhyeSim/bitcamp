@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.service.Feb07Service;
 import com.example.demo.service.Feb07ServiceImpl;
 
+import java.sql.PreparedStatement;
 import java.util.Scanner;
 
 /**
@@ -32,7 +33,7 @@ public class Feb07Controller {
 
         while (true){
             System.out.println("메뉴선택");
-
+            String res = "";
 
             switch (scanner.next()){
                 case "0" :
@@ -50,8 +51,8 @@ public class Feb07Controller {
                     break;
 
                 case "3" :
-                    System.out.println("getPrime");
-                    feb07Service.getPrime(scanner);
+                    System.out.println("두 수를 입력해주세요.");
+                    feb07Service.getPrime(scanner.nextInt(),scanner.nextInt());
                     break;
 
                 case "4" :
@@ -60,8 +61,8 @@ public class Feb07Controller {
                     break;
 
                 case "5" :
-                    System.out.println("numberGolf");
-                    feb07Service.numberGolf(scanner);
+                   res = feb07Service.numberGolf();
+                    System.out.println(res);
                     break;
 
 
