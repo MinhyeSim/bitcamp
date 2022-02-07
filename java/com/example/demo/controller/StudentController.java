@@ -1,11 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.*;
-import com.example.demo.service.BmiService;
-import com.example.demo.service.CalcService;
-import com.example.demo.service.GradeService;
-import com.example.demo.service.HelloService;
-import com.example.demo.service.LoginService;
+import com.example.demo.service.*;
 
 import java.util.Scanner;
 
@@ -20,7 +16,7 @@ import java.util.Scanner;
  * ================================
  * 2022-01-27   MinHye_Sim   최초 생성
  */
-public class DemoController {
+public class StudentController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CalcService calcService = new CalcService();
@@ -33,6 +29,7 @@ public class DemoController {
         HelloDTO hello = new HelloDTO();
         LoginService loginService = new LoginService();
         LoginDTO login = new LoginDTO();
+
         while (true) {
             System.out.println("메뉴 선택");
             String menu = "(0)Exit (1)BMI (2)CALC (3)GRADE (4)HELLO (5)LOGIN ";

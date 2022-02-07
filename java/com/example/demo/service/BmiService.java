@@ -14,9 +14,6 @@ import com.example.demo.domain.BmiDTO;
  * 2022-01-25   MinHye_Sim   최초 생성
  */
 public class BmiService {
-
-
-
     public String getBmi(BmiDTO bmi){
         return String.format("%s는 정상", bmi.getName());
 
