@@ -12,40 +12,35 @@ package com.example.demo.domain;
  * 2022-01-25   MinHye_Sim   최초 생성
  */
 public class BmiDTO {
-    public static String Bmi_App = "BMI";
+    public static String Bmi_App = "BMI 구하기";
         private String name;
-        private String tall;
-        private String weight;
+        private double tall;
+        private double weight;
 
-        public String getName(){
-            return name;
-        }
-
-        public void setName(String name){
-            this.name = name;
-        }
-
-        public String getTall(){
-            return tall;
-        }
-
-        public void setTall(String tall){
-            this.tall = tall;
-        }
-
-        public String getWeight(){
-            return weight;
-        }
-
-        public void setWeight(String weight){
-            this.weight = weight;
-        }
-
-
-
-
-
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getTall() {
+        return tall;
+    }
+
+    public void setTall(double tall) {
+        this.tall = tall;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+}
 
 
 

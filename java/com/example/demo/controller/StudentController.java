@@ -22,7 +22,7 @@ public class StudentController {
         CalcService calcService = new CalcService();
         CalcDTO calc = new CalcDTO();
         BmiDTO bmi = new BmiDTO();
-        StudentService studentService = new StudentImpl();
+        StudentService studentService = new StudentServiceImpl();
         GradeService gradeService = new GradeService();
         GradeDTO grade = new GradeDTO();
         HelloService helloService = new HelloService();
@@ -44,8 +44,8 @@ public class StudentController {
                 case "1":
                     System.out.println(BmiDTO.Bmi_App+"\n이름, 키, 몸무게 입력");
                     bmi.setName(scanner.next());
-                    bmi.setTall(scanner.next());
-                    bmi.setWeight(scanner.next());
+                    bmi.setTall(scanner.nextDouble());
+                    bmi.setWeight(scanner.nextDouble());
                     res= studentService.bmi(bmi);
 
                     break;
