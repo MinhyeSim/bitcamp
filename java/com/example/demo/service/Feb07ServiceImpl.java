@@ -207,7 +207,7 @@ public class Feb07ServiceImpl implements Feb07Service{
             int input = scanner.nextInt();
 
             if (input == answer) {
-                s = "정답입니다." + (count + 1) + "번째 만에 맞히셨습니다.";
+                s = "정답입니다." + count + "번째 만에 맞히셨습니다.";
                 break;
             } else if (input > answer) {
                 System.out.println("더 작은 수를 입력하세요.");
