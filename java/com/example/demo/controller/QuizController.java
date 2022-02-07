@@ -42,35 +42,34 @@ public class QuizController {
     private static void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요 예) 심민혜(2개),권솔이(2개),김지혜(3개),하진희(2개),최은아(3개) ");
         int count = 0;
-        String countManager = "";
-        int count0 = 0;
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
-        int count4 = 0;
-        for (int i = 0; i < 5; i++) {
-            if (arr[i].equals(arr[5])) {
-                count0++;
-            }
-            if (arr[i].equals(arr[6])) {
-                count1++;
-            }
-            if (arr[i].equals(arr[7])) {
-                count2++;
-            }
-            if (arr[i].equals(arr[8])) {
-                count3++;
-            }
-            if (arr[i].equals(arr[9])) {
-                count4++;
+       // String countManager = "";
+       // countManager += arr[0]+"(2개),";
+        //countManager += arr[1]+"(2개),";
+        //countManager += arr[2]+"(3개),";
+        //countManager += arr[3]+"(2개),";
+        //countManager += arr[4]+"(3개),";
+        //countManager = "";
+
+        String s = "";
+        int[] intArr = new int[5];
+        int[] resArr = new int[5];
+        for (int i = 5; i < arr.length; i++) {
+            int a = i % 5;
+
+            //if가 다섯번 반복할 예정
+            for(int j =0; j <5; j++) {
+                if (a == j) {
+                    intArr[j]++;
+                }
+                resArr = intArr;
             }
         }
-        System.out.println(arr[0] + "의 카운트는" + count0);
-        System.out.println(arr[1] + "의 카운트는" + count1);
-        System.out.println(arr[2] + "의 카운트는" + count2);
-        System.out.println(arr[3] + "의 카운트는" + count3);
-        System.out.println(arr[4] + "의 카운트는" + count4);
+        for(int i =0; i<5; i++){
+            System.out.println(arr[i]+"("+resArr[i]+"),");
+        }
     }
+
+
 
     private static void quiz3(String[] arr) {
         System.out.println("Q3. 큐를 담당한 사람을 출력하세요 예) 큐를 담당한 사람 : 최은아");

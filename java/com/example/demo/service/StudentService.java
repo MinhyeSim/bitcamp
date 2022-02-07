@@ -15,7 +15,7 @@ import com.example.demo.domain.*;
  */
 public interface StudentService {
     String bmi(BmiDTO bmi);
-    String Calc(CalcDTO calc);
+    String calc(CalcDTO calc);
     String getGrade(GradeDTO grade);
     String getHello(HelloDTO hello);
     String getLogin(LoginDTO login);

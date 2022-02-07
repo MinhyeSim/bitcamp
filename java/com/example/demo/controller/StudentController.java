@@ -22,7 +22,7 @@ public class StudentController {
         CalcService calcService = new CalcService();
         CalcDTO calc = new CalcDTO();
         BmiDTO bmi = new BmiDTO();
-        BmiService bmiService = new BmiService();
+        StudentService studentService = new StudentImpl();
         GradeService gradeService = new GradeService();
         GradeDTO grade = new GradeDTO();
         HelloService helloService = new HelloService();
@@ -46,7 +46,7 @@ public class StudentController {
                     bmi.setName(scanner.next());
                     bmi.setTall(scanner.next());
                     bmi.setWeight(scanner.next());
-                    res= bmiService.getBmi(bmi);
+                    res= studentService.bmi(bmi);
 
                     break;
                 case "2":
@@ -54,7 +54,7 @@ public class StudentController {
                     calc.setNum1(scanner.nextInt());
                     calc.setOpcode(scanner.next());
                     calc.setNum2(scanner.nextInt());
-                    res = calcService.getCalc(calc);
+                    res = studentService.calc(calc);
 
                     break;
 
@@ -70,24 +70,13 @@ public class StudentController {
                         grades[i].setEng(scanner.nextInt());
                         grades[i].setMath(scanner.nextInt());
 
-
-                    }for (int i = 0; i<grades.length;i++){
-                    System.out.println(grades[i].getName());
-                    System.out.println(grades[i].getKor());
-                    System.out.println(grades[i].getEng());
-                    System.out.println(grades[i].getMath());
-
-
-                }
-
-
-
+                } res = studentService.getGrade(grade);
                     break;
                 case "4":
                     System.out.println(HelloDTO.HELLO_TITLE+"\n name, age");
                     hello.setName(scanner.next());
                     hello.setAge(scanner.nextInt());
-                    res = helloService.getHello(hello);
+                    res = studentService.getHello(hello);
 
                     break;
                 case "5":
@@ -95,7 +84,7 @@ public class StudentController {
                     login.setName(scanner.next());
                     login.setId(scanner.next());
                     login.setName(scanner.next());
-                    res = loginService.getLogin(login);
+                    res = studentService.getLogin(login);
 
                     break;
             }
