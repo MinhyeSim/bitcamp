@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.GoogleDTO;
+import com.example.demo.auth.domain.GoogleDTO;
 
 import java.util.Scanner;
 

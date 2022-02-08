@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.CalcDTO;
+import com.example.demo.auth.domain.CalcDTO;
 
 /**
  * packageName: com.example.demo.calc

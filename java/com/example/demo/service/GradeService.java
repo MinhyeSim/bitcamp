@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.GradeDTO;
+import com.example.demo.auth.domain.GradeDTO;
 
 /**
  * packageName: com.example.demo.grdae

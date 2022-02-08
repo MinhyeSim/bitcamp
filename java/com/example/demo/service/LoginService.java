@@ -1,8 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.LoginDTO;
+import com.example.demo.auth.domain.LoginDTO;
 
-import java.util.Scanner;
 /**
  * packageName: com.example.demo.calc
  * fileName   : LoginDemo.java

@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.BmiDTO;
+import com.example.demo.auth.domain.BmiDTO;
 
 /**
  * packageName: com.example.demo.bmi

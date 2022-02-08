@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.KaKaoDTO;
+import com.example.demo.auth.domain.KaKaoDTO;
 
 import java.util.Scanner;
 /**
