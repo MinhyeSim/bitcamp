@@ -40,7 +40,7 @@ public class Feb08ServiceImpl implements Feb08Service{
 
         while (true){
 
-            System.out.println("0)exit 1)입금 2)출금 3)잔고");
+            System.out.println("1)입금 2)출금 3)잔고 4)exit");
             System.out.println("선택 : ");
 
             int choice =  scanner.nextInt();
@@ -67,7 +67,7 @@ public class Feb08ServiceImpl implements Feb08Service{
 
                 case 4:
                     System.out.println("프로그램 종료");
-                    break;
+                    return;
 
                 default:
                     System.out.println("다시 입력해주세요");
