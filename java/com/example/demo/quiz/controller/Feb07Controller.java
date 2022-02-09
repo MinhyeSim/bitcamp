@@ -30,7 +30,7 @@ public class Feb07Controller {
         Feb07Service feb07Service = new Feb07ServiceImpl();
 
         while (true){
-            System.out.println("메뉴선택");
+            System.out.println("[소메뉴] 0)Exit 1)Dice 2)Rps 3) 4)LeapYear 5)NumberGolf");
             String res = "";
 
             switch (scanner.next()){

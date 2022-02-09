@@ -17,7 +17,7 @@ public class Feb09Controller {
     public void execute(Scanner scanner) {
 
         while (true){
-            System.out.println("메뉴선택");
+            System.out.println("[소메뉴] 0)Exit 1)Dice 2)Rps 3) 4)LeapYear 5)NumberGolf");
             String res = "";
 
             switch (scanner.next()){
