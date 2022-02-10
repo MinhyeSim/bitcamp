@@ -1,4 +1,8 @@
 package com.example.demo.auth.domain;
+
+import com.example.demo.oop.domain.IPhone;
+import jdk.jshell.Snippet;
+
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcApp.java
@@ -13,9 +17,19 @@ package com.example.demo.auth.domain;
 
 public class CalcDTO {
     public static String CALC_APP ="계산기";
+
+    private final static CalcDTO calcDTO = new CalcDTO();
+
+    private CalcDTO(){}
+
+    public static CalcDTO getInstance(){
+        return calcDTO;
+    }
+
     private int num1;
     private String opcode;
     private int num2;
+
 
     public int getNum1(){
         return num1;

@@ -21,16 +21,12 @@ import java.util.Scanner;
 public class AuthController {
     public void execute(Scanner scanner) {
 
-        CalcDTO calc = new CalcDTO();
         CalcService calcService = new CalcService();
-        BmiDTO bmi = new BmiDTO();
         BmiService bmiService = new BmiService();
         StudentService studentService = new StudentServiceImpl();
-        GradeDTO grade = new GradeDTO();
         GradeService gradeService = new GradeService();
-        HelloDTO hello = new HelloDTO();
         HelloService helloService = new HelloService();
-        LoginDTO login = new LoginDTO();
+;
         LoginService loginService = new LoginService();
 
         while (true) {
@@ -46,18 +42,20 @@ public class AuthController {
                     return;
                 case "1":
                     System.out.println(BmiDTO.Bmi_App+"\n이름, 키, 몸무게 입력");
-                    bmi.setName(scanner.next());
-                    bmi.setTall(scanner.nextDouble());
-                    bmi.setWeight(scanner.nextDouble());
-                    res= studentService.bmi(bmi);
+                    BmiDTO b = BmiDTO.getInstance();
+                    b.setName(scanner.next());
+                    b.setTall(scanner.nextDouble());
+                    b.setWeight(scanner.nextDouble());
+                    res= studentService.bmi(b);
 
                     break;
                 case "2":
                     System.out.println(CalcDTO.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
-                    calc.setNum1(scanner.nextInt());
-                    calc.setOpcode(scanner.next());
-                    calc.setNum2(scanner.nextInt());
-                    res = studentService.calc(calc);
+                    CalcDTO c = CalcDTO.getInstance();
+                    c.setNum1(scanner.nextInt());
+                    c.setOpcode(scanner.next());
+                    c.setNum2(scanner.nextInt());
+                    res = studentService.calc(c);
 
                     break;
 
@@ -67,27 +65,29 @@ public class AuthController {
                     GradeDTO[] grades = new GradeDTO[count];
                     for (int i = 0; i<grades.length;i++){
                         System.out.println("이름, 국어, 영어, 수학 점수");
-                        grades[i] = new GradeDTO();
-                        grades[i].setName(scanner.next());
-                        grades[i].setKor(scanner.nextInt());
-                        grades[i].setEng(scanner.nextInt());
-                        grades[i].setMath(scanner.nextInt());
-
-                } res = studentService.getGrade(grade);
+                        GradeDTO g = GradeDTO.getInstance();
+                        g.setName(scanner.next());
+                        g.setKor(scanner.nextInt());
+                        g.setEng(scanner.nextInt());
+                        g.setMath(scanner.nextInt());
+                        res = studentService.getGrade(g);
+                }
                     break;
                 case "4":
                     System.out.println(HelloDTO.HELLO_TITLE+"\n name, age");
-                    hello.setName(scanner.next());
-                    hello.setAge(scanner.nextInt());
-                    res = studentService.getHello(hello);
+                    HelloDTO h = HelloDTO.getInstance();
+                    h.setName(scanner.next());
+                    h.setAge(scanner.nextInt());
+                    res = studentService.getHello(h);
 
                     break;
                 case "5":
-                    System.out.println(LoginDTO.LOGIN_APP+"\n id, pw, name");
-                    login.setName(scanner.next());
-                    login.setId(scanner.next());
-                    login.setName(scanner.next());
-                    res = studentService.getLogin(login);
+                    System.out.println(UserDTO.LOGIN_APP+"\n id, pw, name");
+                    UserDTO u =UserDTO.getInstance();
+                    u.setName(scanner.next());
+                    u.setId(scanner.next());
+                    u.setName(scanner.next());
+                    res = studentService.getLogin(u);
 
                     break;
                 default: res = "Wrong";break;

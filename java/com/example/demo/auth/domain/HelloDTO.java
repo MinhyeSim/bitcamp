@@ -12,6 +12,15 @@ package com.example.demo.auth.domain;
  */
 public class HelloDTO {
     public static String HELLO_TITLE = "헬로우 어플";
+
+    private final static HelloDTO helloDTO = new HelloDTO();
+
+    private HelloDTO(){}
+
+    public static HelloDTO getInstance(){
+        return helloDTO;
+    }
+
     private String name;
     private int age;
 

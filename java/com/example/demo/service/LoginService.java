@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.auth.domain.LoginDTO;
+import com.example.demo.auth.domain.UserDTO;
 
 /**
  * packageName: com.example.demo.calc
@@ -15,7 +15,7 @@ import com.example.demo.auth.domain.LoginDTO;
  */
 public class LoginService {
 
-    public String getLogin(LoginDTO login) {
+    public String getLogin(UserDTO login) {
         return String.format("ID : %s , PW : %s, NAME %s님 로그인 성공",login.getId(),login.getPw(),login.getName());
 
        }

@@ -1,5 +1,9 @@
 package com.example.demo.oop.controller;
 
+import com.example.demo.oop.domain.CelPhone;
+import com.example.demo.oop.domain.GalPhone;
+import com.example.demo.oop.domain.IPhone;
+import com.example.demo.oop.domain.Phone;
 import com.example.demo.oop.service.PhoneService;
 import com.example.demo.oop.service.PhoneServiceImpl;
 
@@ -18,37 +22,55 @@ import java.util.Scanner;
  */
 public class OopController {
     public static void execute(Scanner scanner){
-        PhoneService service = new PhoneServiceImpl();
-        while (true){
-            System.out.println("메뉴선택\n [집전화\n"+"휴대폰\n"+"아이폰\n"+"갤럭시노트]");
 
+        while (true){
+            System.out.println("[메뉴] 0.exit \n"+
+                    "1.은닉화(Encapsulation) \n"+
+                    "2.상속(Inheritance) \n"+
+                    "3.추상화(Abstraction) \n"+
+                    "4.다형성 Polymorphism");
             switch (scanner.next()){
                 case "0" :
-                    System.out.println("exit");
-                    return;
+                    System.out.println("종류"); return;
                 case "1" :
-                    System.out.println("집전화");
-                    service.usePhone(scanner);
-
-                    break;
+                    System.out.println("POJO가 은닉화다");break;
                 case "2" :
-                    System.out.println("휴대폰");
-                    service.useCelPhone(scanner);
-                    break;
-                case "3" :
-                    System.out.println("아이폰");
-                    service.useIPhone(scanner);
-                    break;
-                case "4" :
-                    System.out.println("갤럭시노트");
-                    service.useGalPhone(scanner);
+                    System.out.println("extends가 상속이다.");
+                    Phone phone = new Phone("금성전화기","금성전자");
+                    CelPhone celPhone = new CelPhone("핸드폰","블랙베리","이동중에");
+                    IPhone iPhone = new IPhone("애플");
+                    GalPhone galPhone = new GalPhone("삼성");
+                    PhoneService phoneService = new PhoneServiceImpl();
+                    System.out.println("[소메뉴] 0.exit 1.집전화 2.휴대폰 3.아이폰 4.갤럭시폰");
+                    switch (scanner.next()){
+                        case "0" :
+                            System.out.println("exit");return;
+                        case "1" :
+                            phone.setCall("여보세요?");
+                            phoneService.usePhone(phone);
+                            break;
 
-                default:
-                    System.out.println("Wrong Number");
+                        case "2" :
+                            celPhone.setCall("안녕하세요 000 입니다.");
+                            phoneService.useCelPhone(celPhone);
+                            break;
+                        case "3" :
+                            iPhone.setSearch("검색");
+                            phoneService.useIPhone(iPhone);
+                            break;
+                        case "4" :
+                            galPhone.setPay("삼성페이");
+                            phoneService.useGalPhone(galPhone);
+                            break;
+                    }
                     break;
+
 
 
             }
+
+
+
         }
 
 

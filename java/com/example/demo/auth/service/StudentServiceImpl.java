@@ -82,7 +82,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public String getLogin(LoginDTO login) {
+    public String getLogin(UserDTO login) {
         return String.format("ID : %s , PW : %s, NAME %s님 로그인 성공",login.getId(),login.getPw(),login.getName());
     }
 }
