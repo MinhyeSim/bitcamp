@@ -1,7 +1,5 @@
 package com.example.demo.auth.domain;
 
-import com.example.demo.oop.domain.GalPhone;
-
 /**
  * packageName: com.example.demo.grdae
  * fileName   : GradeApp

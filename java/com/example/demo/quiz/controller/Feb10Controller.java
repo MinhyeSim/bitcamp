@@ -1,5 +1,8 @@
 package com.example.demo.quiz.controller;
 
+import com.example.demo.quiz.service.Feb10Service;
+import com.example.demo.quiz.service.Feb10ServiceImpl;
+
 import java.util.Scanner;
 
 /**
@@ -13,12 +16,19 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08   MinHye_Sim   최초 생성
  */
-public class Feb09Controller {
+public class Feb10Controller {
+    /**
+     * 0: exit
+     * 1. Sort3
+     * 2. Sort2
+     * 3. Square
+     * 4. Zigzag
+     * 5. Star
+     * */
     public void execute(Scanner scanner) {
-
+        Feb10Service service = new Feb10ServiceImpl();
         while (true){
-            System.out.println("[소메뉴] 0)Exit 1)Dice 2)Rps 3) 4)LeapYear 5)NumberGolf");
-            String res = "";
+            System.out.println("[소메뉴] 0)Exit 1)Sort3 2)Sort2 3)Square 4)Zigzag 5)Star");
 
             switch (scanner.next()){
                 case "0" :
@@ -26,23 +36,30 @@ public class Feb09Controller {
                     return;
 
                 case "1" :
-                    System.out.println("dice");
+                    System.out.println("Sort3");
+
                     break;
 
                 case "2" :
-                    System.out.println("rps");
+                    System.out.println("Sort2");
                     break;
 
                 case "3" :
-                    System.out.println("두 수를 입력해주세요.");
+                    System.out.println("Square");
                     break;
 
                 case "4" :
-                    System.out.println("leapYear");
+                    System.out.println("Zigzag");
+                    service.zigzag();
                     break;
 
                 case "5" :
-                    System.out.println(res);
+                    System.out.println("Star");
+                    break;
+
+
+                case "6" :
+                    System.out.println("Wrong");
                     break;
 
 

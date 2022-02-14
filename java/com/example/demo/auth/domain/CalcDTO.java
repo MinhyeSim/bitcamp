@@ -1,8 +1,5 @@
 package com.example.demo.auth.domain;
 
-import com.example.demo.oop.domain.IPhone;
-import jdk.jshell.Snippet;
-
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcApp.java

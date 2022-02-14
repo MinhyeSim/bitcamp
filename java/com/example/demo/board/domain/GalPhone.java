@@ -1,6 +1,4 @@
-package com.example.demo.oop.domain;
-
-import jdk.jshell.Snippet;
+package com.example.demo.board.domain;
 
 /**
  * packageName: com.example.demo.oop.domain

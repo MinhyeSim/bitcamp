@@ -1,7 +1,4 @@
-package com.example.demo.oop.domain;
-
-import com.example.demo.auth.domain.CalcDTO;
-import com.example.demo.oop.domain.GalPhone;
+package com.example.demo.board.domain;
 
 /**
  * packageName: com.example.demo.oop.domain
@@ -21,7 +18,7 @@ public class IPhone extends CelPhone {
     protected String search;
 
     public IPhone(String company) {
-        super(company);
+        super(KIND,company,"이동중");
     }
 
 

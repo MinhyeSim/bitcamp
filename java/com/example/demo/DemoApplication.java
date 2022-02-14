@@ -1,11 +1,8 @@
 package com.example.demo;
 
 import com.example.demo.auth.controller.AuthController;
-import com.example.demo.oop.controller.OopController;
-import com.example.demo.quiz.controller.Feb06Controller;
-import com.example.demo.quiz.controller.Feb07Controller;
-import com.example.demo.quiz.controller.Feb08Controller;
-import com.example.demo.quiz.controller.QuizController;
+import com.example.demo.board.controller.OopController;
+import com.example.demo.quiz.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -23,6 +20,7 @@ public class DemoApplication {
         Feb06Controller feb06Controller = new Feb06Controller();
         Feb07Controller feb07Controller = new Feb07Controller();
         Feb08Controller feb08Controller = new Feb08Controller();
+        Feb10Controller feb10Controller = new Feb10Controller();
 
         while(true){
             System.out.println("[메인메뉴] \n 0.Exit 1.Auth 2.OOP 3.Quiz 4.Algorithm");

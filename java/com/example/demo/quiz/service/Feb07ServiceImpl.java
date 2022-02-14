@@ -151,6 +151,9 @@ public class Feb07ServiceImpl implements Feb07Service{
 
 
     /**
+     * author : 심민혜
+     * desc : leap Year
+     *
      * 목표 : 특정 연도(Year)를 입력 받아 해당 연도가 윤년인지 평년인지 판별
      * 윤년이란 2월을 29일로 둬 4년 마다 1번씩 돌아오는 해이다. (4로 나눠 떨어지는 해는 윤년, 그밖의 해는 평년으로한다)
      *
@@ -174,19 +177,22 @@ public class Feb07ServiceImpl implements Feb07Service{
      *    ||은 ||은 기준으로 좌항과 우항 중 하나라도 참이면 전체가 참이 되어 값이 출력된다.)
      * 2. 윤년 및 평년 구하는 조건을 토대로 다음에 부합하는 if-else loop를 생성한다.
      * [년도를 4로 나눈 나머지가 0]이면서(and),[년도를 100으로 나눈 것이 0이 아니거나][400으로 나눈 나머지가 0인것]
-     * [기본값] = 평년
      *
+     * (출처 : https://rypro.tistory.com/146)
      * */
 
     @Override
     public void leapYear(Scanner scanner) {
         Scanner scanner1 = new Scanner(System.in);
-        System.out.println("연도를 입력하시오 : ");
+        System.out.println("연도 : ");
         int year = scanner1.nextInt();
         if(year % 4 ==0 && year % 100 !=0 || year % 400 ==0){
+            //년도를 4로 나눈 나머지가 0'이면서 년도를 100으로 나눈 것이 0이 아니거나 400으로 나눈 나머지가 0일 경우를 조건
             System.out.println(year + " 년은 윤년입니다.");
+            //년도를 4로 나눈 나머지가 0이면서 년도를 400으로 나눈 나머지가 0일 경우 윤년으로 출력
         } else {
             System.out.println(year + " 년은 평년입니다.");
+            //년도를 4로 나눈 나머지가 0이면서 년도를 100으로 나눈 나머지가 0일 경우 평년으로 출력
         }
         }
 

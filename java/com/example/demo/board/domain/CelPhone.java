@@ -1,4 +1,4 @@
-package com.example.demo.oop.domain;
+package com.example.demo.board.domain;
 
 /**
  * packageName: com.example.demo.oop.domain
@@ -21,7 +21,7 @@ public class CelPhone extends Phone{
         super(kind, company);
         this.move = move;
     }
-    
+
 
     public boolean isPortable() {
         return portable;
